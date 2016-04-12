@@ -15,7 +15,6 @@ alias sub='open -a "Sublime Text"'
 alias bi='bundle install'
 alias g='git'
 alias gcm='git commit -m'
-alias dev='cd ~/govuk/govuk-puppet/development'
 
 alias be='bundle exec'
 alias vim-conflicts="Pt -l '<<<' | xargs -o vim -O"
