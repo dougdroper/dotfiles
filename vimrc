@@ -9,13 +9,15 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'ctrlp.vim'
 Plugin 'ack.vim'
 Plugin 'tpope/vim-dispatch'
+Plugin 'tpope/vim-rails'
+Plugin 'troydm/zoomwintab.vim'
 
 " for general text editing
 Plugin 'tComment'
 Plugin 'endwise.vim'
 Plugin 'surround.vim'
 Plugin 'abolish.vim'
-Plugin 'jpo/vim-railscasts-theme'
+Plugin 'nazo/pt.vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -29,7 +31,7 @@ syntax enable
 
 " set background=dark
 " colorscheme monokai
-colorscheme railscasts
+colorscheme Tomorrow-Night-Bright
 
 set autoindent
 set ruler
@@ -43,7 +45,7 @@ set smartcase
 set noswapfile
 set showcmd
 set wildmode=list:longest,full
-set tags=tags " Put ctags file in .tags
+set tags=tags " Put ctags file in tags
 set scrolloff=5               " keep at least 5 lines above/below
 set sidescrolloff=5           " keep at least 5 lines left/right
 set cmdheight=2               " command line two lines high
@@ -56,7 +58,7 @@ set noerrorbells              " @andrewmcdonough does not like bells
 set fileformats=unix
 set ff=unix
 set lazyredraw
-set shell=bash
+set shell=zsh
 " Allow backspacing over autoindent, eol and start of lines
 set backspace=indent,eol,start
 set nohlsearch
@@ -343,3 +345,5 @@ if &term =~ '256color'
   " see also http://snk.tuxfamily.org/log/vim-256color-bce.html
   set t_ut=
 endif
+
+autocmd BufWritePre * :%s/\s\+$//e
