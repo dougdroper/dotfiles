@@ -41,3 +41,5 @@ source /usr/local/opt/chruby/share/chruby/auto.sh
 
 RUBIES+=(~/.rvm/rubies/*)
 export ACKRC=".ackrc"
+export POW_DOMAINS='dev.gov.uk'
+eval "$(rbenv init -)"
